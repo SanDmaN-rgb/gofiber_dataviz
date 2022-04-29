@@ -1,0 +1,133 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+pre{
+    font-size: 7em;
+}
+.tick line {
+   stroke:#C0C0BB;
+}
+.tick text {
+  fill:#635F5D;
+  font-family: 'Poppins', sans-serif;
+}
+.bar {
+  fill: #0F8C79;
+}
+.bar:hover {
+  cursor: pointer;
+  fill: #137B80;
+  transition: .3s
+}
+.axis-label {
+  font-size: 2.5em;
+  fill:#635F5D;
+}
+.chart{
+  width:100%;
+  text-align: center;
+  margin-top:1%;
+}
+.input-style{
+  /* color: #FFF;
+  background-color:#0F8C79;
+  text-align:center;
+  width:400px;
+  height:75px;
+  margin:auto;
+  border-radius:3px; */
+}
+.input-style input{
+  border: 3.5px dashed #fff;
+  border-radius: 3px;
+  width:700px;
+  height:75px;
+  color: rgb(63, 63, 63);
+  background-color:#91D8C7;
+  margin-bottom:-5%;
+  opacity:1;
+}
+
+.input-style input[type=submit]{
+  border: 3.5px solid #fff;
+  border-radius: 5px;
+  width:100px;
+  height:50px;
+  color: rgb(63, 63, 63);
+  background-color:#91D8C7;
+  margin:auto;
+  opacity:1;
+} 
+
+.input-style input:hover{
+  cursor:pointer;
+  transition: .3s;
+  background-color:#0F8C79;
+  opacity:1;
+  color:#fff
+}
+
+.input-style input[type=submit]:hover{
+  cursor:pointer;
+  transition: .3s;
+  background-color:#0F8C79;
+  opacity:1;
+  color:#fff;
+}
+
+input[type=date]{
+  display:inline-block;
+  border: 3.5px solid transparent;
+  border-radius: 5px;
+  width:100px;
+  height:50px;
+  color: rgb(63, 63, 63);
+  background-color:#91D8C7;
+  margin:auto;
+  opacity:1;
+  margin-top: 5px;
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+} 
+input[type=date]:hover{
+  cursor:pointer;
+  transition: .3s;
+  background-color:#0F8C79;
+  opacity:1;
+  color:#fff;
+} 
+svg{ 
+  margin-top:-100px
+}
+
+.top-left{
+  display:inline-block;
+  background-color: #91D8C7;
+  color: rgb(63, 63, 63);
+  border-radius: 3px;
+  width: 400px;
+  height:fit-content;
+  text-align: left;
+  padding: 10px 10px 0px 10px;
+  margin: 10px 10px 0px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  position:relative;
+}
+
+.top-left:hover{
+  background-color: #0F8C79;
+  color: #fff;
+}
+
+.top-left h3{
+  text-align:center;
+}
+
+hr{
+  margin:5px 10px 10px -10px;
+  width:105%;
+}
+
