@@ -28,15 +28,7 @@ pre{
   text-align: center;
   margin-top:1%;
 }
-.input-style{
-  /* color: #FFF;
-  background-color:#0F8C79;
-  text-align:center;
-  width:400px;
-  height:75px;
-  margin:auto;
-  border-radius:3px; */
-}
+
 .input-style input{
   border: 3.5px dashed #fff;
   border-radius: 3px;
@@ -45,6 +37,7 @@ pre{
   color: rgb(63, 63, 63);
   background-color:#91D8C7;
   margin-bottom:-5%;
+  margin-left:10px;
   opacity:1;
 }
 
@@ -57,6 +50,7 @@ pre{
   background-color:#91D8C7;
   margin:auto;
   opacity:1;
+  margin-left:10px;
 } 
 
 .input-style input:hover{
@@ -86,6 +80,7 @@ input[type=date]{
   margin:auto;
   opacity:1;
   margin-top: 5px;
+  margin-left:10px; 
   width: 200px;
   padding-left: 10px;
   padding-right: 10px;
@@ -99,7 +94,9 @@ input[type=date]:hover{
   color:#fff;
 } 
 svg{ 
-  margin-top:-100px
+  margin-top:-50px;
+  height:400px;
+  width:900px;
 }
 
 .top-left{
@@ -131,3 +128,61 @@ hr{
   width:105%;
 }
 
+@media screen and (max-width: 1440px){
+  .top-left { 
+    width: 400px;
+ }
+ .input-style input{
+   width: 700px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+ }
+ input[type=date]{
+   width: 200px;
+ }
+ svg{
+   transform: scale(1);
+   margin:-5% 5% 0 0;
+        /* t   r  b    l  */
+ }
+}
+
+@media screen and (max-width: 950px){
+  .top-left { 
+    width: 47%;
+ }
+ .input-style input{
+   width: 700px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+ }
+ input[type=date]{
+   width: 200px;
+ }
+ svg{
+   transform: scale(1);
+   margin:-5% 5% 0 0;
+        /* t   r  b    l  */
+ }
+}
+
+@media screen and (max-width: 320px) {
+  .top-left { 
+     width: 100%;
+  }
+  .input-style input{
+    width: 100%;
+  }
+  .input-style input[type=submit]{  
+    width: 100%
+  }
+  input[type=date]{
+    width: 100%;
+  }
+  svg{
+    transform: scale(.35);
+    margin:-55% 0 -30% -92%;
+  }
+}

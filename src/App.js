@@ -14,11 +14,11 @@ import './style.css';
 const width = 900;
 const height = 400;
 const margin = {
-  top: 50,
+  top: 10,
   right: 25,
   bottom: 55,
   left: 100,
-};
+}; 
 const xAxisLabelOffset = 55;
 
 export const App = () => {
@@ -29,7 +29,7 @@ export const App = () => {
   const[filename, setFilename] = useState('Choose File');
   const[uploadedFile,setUploadedFile] = useState({});
   const[message,setMessage] = useState('');
- 
+   
 //File upload
   const onFileChange = e => {
       setFile(e.target.files[0]);
@@ -60,17 +60,17 @@ export const App = () => {
         } 
       }
   };
-   
+    
 //Data setting  
-  const csvUrl = uploadedFile.filePath; //'/uploads/mobiledownloads.csv'
+  const csvUrl = '/uploads/mobiledownloads.csv'; //uploadedFile.filePath
   console.log(csvUrl);
+  
   useEffect(() => {
     const row = (d) => {
       d.Downloads = +d.Downloads  //turns Downloads from string into integer 
       return d;
     };
     csv(csvUrl,row).then((data) => {
-
       setData((data !== "") ? data: "");});
   }, []);
 
@@ -120,9 +120,10 @@ export const App = () => {
           uploadedFile={uploadedFile}
       />
       
-    </div>  
+    </div>    
     {/* Chart */}
-    <svg width={width} height={height}>
+    {/*  viewBox="250 40 450 400" */}
+    <svg>
       <g transform={`translate(${margin.left},${margin.top})`}>        
 				<AxisX 
           xScale = {xScale} 
@@ -130,7 +131,7 @@ export const App = () => {
           tickFormat={numFormat}
           />
         <AxisY yScale = {yScale}/>
-        
+         
         <text className="axis-label"
           x={innerWidth/2} 
           textAnchor="middle"
@@ -139,7 +140,7 @@ export const App = () => {
           data = {datum} 
           xScale = {xScale} 
           yScale = {yScale}
-          tooltipFormat={numFormat}
+          tooltipFormat={numFormat} 
           />        
       </g> 
     </svg>    
