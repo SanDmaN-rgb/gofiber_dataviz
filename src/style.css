@@ -1,6 +1,7 @@
-* {
+body {
     font-family: 'Poppins', sans-serif;
 }
+
 pre{
     font-size: 7em;
 }
@@ -24,7 +25,11 @@ pre{
   fill:#635F5D;
 }
 .chart{
-  width:100%;
+  width:auto;
+}
+
+.inner-container{
+  
   text-align: center;
   margin-top:1%;
 }
@@ -104,8 +109,8 @@ svg{
   background-color: #91D8C7;
   color: rgb(63, 63, 63);
   border-radius: 3px;
-  width: 400px;
-  height:fit-content;
+  width: 25%;
+  height: auto;
   text-align: left;
   padding: 10px 10px 0px 10px;
   margin: 10px 10px 0px 10px;
@@ -125,10 +130,12 @@ svg{
 
 hr{
   margin:5px 10px 10px -10px;
-  width:105%;
+  width:100%;
 }
 
-@media screen and (max-width: 1440px){
+/* screen sizes */
+
+@media screen and (max-width: 1441px){
   .top-left { 
     width: 400px;
  }
@@ -143,12 +150,32 @@ hr{
  }
  svg{
    transform: scale(1);
-   margin:-5% 5% 0 0;
+   margin:-5% 5% 0 -5%;
         /* t   r  b    l  */
  }
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 951px){
+  .top-left { 
+    width: 425px;
+ }
+ .input-style input{
+   width: 700px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+ }
+ input[type=date]{
+   width: 200px;
+ }
+ svg{
+   transform: scale(.9);
+   margin:-5% 5% 0 -5%;
+        /* t   r  b    l  */
+ }
+}
+
+@media screen and (max-width: 891px){
   .top-left { 
     width: 47%;
  }
@@ -162,13 +189,119 @@ hr{
    width: 200px;
  }
  svg{
-   transform: scale(1);
-   margin:-5% 5% 0 0;
+   transform: scale(.8);
+   margin:-5% 10% 0 -5%;
         /* t   r  b    l  */
  }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 760px){
+  .top-left { 
+    width: 47%;
+ }
+ .input-style input{
+   width: 700px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+ }
+ input[type=date]{
+   width: 200px;
+ }
+ svg{
+   transform: scale(.8);
+   margin:-5% 10% 0 -15%;
+        /* t   r  b  l  */
+ }
+}
+
+@media screen and (max-width: 731px){
+  .top-left { 
+    width: 78%;
+ }
+ .input-style input{
+   width: 580px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+ }
+ input[type=date]{
+   width: 200px;
+ }
+ svg{
+   transform: scale(.75);
+   margin:-5% 10% 0 -19%;
+        /* t   r  b  l  */
+ }
+}
+
+@media screen and (max-width: 601px){
+  .top-left { 
+    width: 78%;
+ }
+ .input-style input{
+   width: 60%;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+ }
+ input[type=date]{
+   width: 200px;
+ }
+ svg{
+   transform: scale(.6);
+   margin:-25% 10% 0 -30%;
+        /* t   r  b  l  */
+ }
+}
+
+@media screen and (max-width: 415px){
+  .top-left { 
+    width: 78%;
+ }
+ .input-style input{
+   width: 60%;
+   margin-left:-110px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+   margin-left:-110px;
+ }
+ input[type=date]{
+   width: 200px;
+   margin-left:-110px;
+ }
+ svg{
+   transform: scale(.38);
+   margin:-45% 10% -30% -65%;
+        /* t   r  b  l  */
+ }
+}
+
+@media screen and (max-width: 361px){
+  .top-left { 
+    width: 78%;
+ }
+ .input-style input{
+   width: 60%;
+   margin-left:-110px;
+ }
+ .input-style input[type=submit]{
+   width: 100px;
+   margin-left:-110px;
+ }
+ input[type=date]{
+   width: 200px;
+   margin-left:-110px;
+ }
+ svg{
+   transform: scale(.38);
+   margin:-45% 10% -30% -80%;
+        /* t   r  b  l  */
+ }
+}
+
+@media screen and (max-width: 321px) {
   .top-left { 
      width: 100%;
   }
@@ -176,7 +309,7 @@ hr{
     width: 100%;
   }
   .input-style input[type=submit]{  
-    width: 100%
+    width: 100%;
   }
   input[type=date]{
     width: 100%;

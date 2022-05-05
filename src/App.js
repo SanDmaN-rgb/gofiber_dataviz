@@ -9,10 +9,11 @@ import { AndroidDownloads } from './components/AndroidDownloads';
 import { IosDownloads } from './components/IosDownloads';
 import axios from 'axios';
 import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Barchart dimensions 
 const width = 900;
-const height = 400;
+const height = 350;
 const margin = {
   top: 10,
   right: 25,
@@ -28,7 +29,7 @@ export const App = () => {
   const[file,setFile] = useState('');
   const[filename, setFilename] = useState('Choose File');
   const[uploadedFile,setUploadedFile] = useState({});
-  const[message,setMessage] = useState('');
+  const[message,setMessage] = useState(''); 
    
 //File upload
   const onFileChange = e => {
@@ -62,7 +63,8 @@ export const App = () => {
   };
     
 //Data setting  
-  const csvUrl = '/uploads/mobiledownloads.csv'; //uploadedFile.filePath
+  let csvUrl = '/uploads/mobiledownloads.csv'; //uploadedFile.filePath
+  // csvUrl = uploadedFile.filePath;
   console.log(csvUrl);
   
   useEffect(() => {
@@ -73,14 +75,14 @@ export const App = () => {
     csv(csvUrl,row).then((data) => {
       setData((data !== "") ? data: "");});
   }, []);
+ 
 
-  
 //Date selection 
   const onChange = e => setSelectedDate((e.target.value).toString());
   const dateFormat = selectedDate.slice(5,7)+"/"+selectedDate.slice(8,11)+"/"+selectedDate.slice(0,4);
 
 
-//Slicing data by date selected
+//Slicing data according to date selected
   if (!data) {return <pre>Loading...</pre>;}
   
   const dateFromData = [data.map(d => d.Date)];
@@ -104,14 +106,14 @@ export const App = () => {
   	.padding(0.5);
   
   const xScale = scaleLinear()
-    .domain([0, max(datum, d => d.Downloads+100)]) // /1+100 to turn the value of d.Downloads to int, then add an int to keep 'ticks' or the number labels         
+    .domain([0, max(datum, d => d.Downloads+100)]) // /+100 to keep 'ticks' or the number labels         
     .range([0, innerWidth]);                      //larger that the value of Downloads column of selected rows
 
   return (
     <>
     <AndroidDownloads data={data} numFormat={numFormat}/>
     <IosDownloads data={data} numFormat={numFormat}/>
-    <div className="chart">   
+    <div className="inner-container">   
     <div className="input-style">
       <FileUpload 
           onSubmit={onSubmit}
@@ -122,7 +124,7 @@ export const App = () => {
       
     </div>    
     {/* Chart */}
-    {/*  viewBox="250 40 450 400" */}
+     
     <svg>
       <g transform={`translate(${margin.left},${margin.top})`}>        
 				<AxisX 
@@ -143,7 +145,7 @@ export const App = () => {
           tooltipFormat={numFormat} 
           />        
       </g> 
-    </svg>    
+    </svg>   
     {/* Chart */} 
     <DateInput 
           onChange={onChange} 

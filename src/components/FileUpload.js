@@ -1,8 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const FileUpload = ({onSubmit, onChange, filename, uploadedFile}) => {
   
   return (
+    <div className="col-md">
     <Fragment>
         <form onSubmit={onSubmit}>
           <div className="custom-file mb-4">
@@ -21,11 +23,6 @@ export const FileUpload = ({onSubmit, onChange, filename, uploadedFile}) => {
           </div>
         </div>: null}
     </Fragment>
+    </div>
   )
 }
-
-
-{/* <div className="input-group">
-            <input type="file" className="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" onChange={onChange}/>
-            <button className="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Upload</button>
-        </div> */}
