@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Card } from 'react-bootstrap';
 
 
 export const AndroidDownloads = ({data, numFormat}) => {

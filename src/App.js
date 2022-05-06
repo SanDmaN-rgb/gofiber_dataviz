@@ -9,7 +9,7 @@ import { AndroidDownloads } from './components/AndroidDownloads';
 import { IosDownloads } from './components/IosDownloads';
 import axios from 'axios';
 import './style.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Barchart dimensions 
 const width = 900;

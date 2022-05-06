@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Card } from 'react-bootstrap';
 
 export const IosDownloads = ({data, numFormat}) => {
     const iosDownloadsFromData = [data.filter(d => d.Device=='iOS').map(d => d.Downloads)]; //maps Downloads with iOS as Device to iosDownloadsFromData

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const FileUpload = ({onSubmit, onChange, filename, uploadedFile}) => {
   
