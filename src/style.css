@@ -29,7 +29,6 @@ pre{
 }
 
 .inner-container{
-  
   text-align: center;
   margin-top:1%;
 }
@@ -218,6 +217,7 @@ hr{
 @media screen and (max-width: 731px){
   .top-left { 
     width: 78%;
+    display:block
  }
  .input-style input{
    width: 580px;
