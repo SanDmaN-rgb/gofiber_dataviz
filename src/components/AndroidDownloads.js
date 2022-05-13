@@ -20,10 +20,24 @@ export const AndroidDownloads = ({data, numFormat}) => {
       //   <Card.Text>at {maxDate}</Card.Text>
       //   </Card.Body>
       // </Card>
-      <div className="top-left">{/*top-left  */}
+      <div className="bg-[#91D8C7] 
+                        rounded-md 
+                        shadow-lg 
+                        py-2 px-2 mx-1.5 my-2 
+                        shrink 
+                        inline-block 
+                        w-1/4 
+                        lg:w-[30%]
+                        sm:block
+                        sm:w-1/2
+                        xxs:w-full
+                      hover:bg-[#0F8C79] hover:text-white hover:cursor-pointer 
+                        duration-300
+                        
+                        ">{/*top-left  */}
         <h6>Highest Android Download:</h6>
-        <hr/>
-        <h3>{numFormat(maxValue)}</h3>
+        <hr className="w-full mt-[5px] mb-[10px]"/>
+        <h1 className="text-3xl text-center ">{numFormat(maxValue)}</h1>
         <hr/>
         <h6>at: {maxDate}</h6>
       </div>

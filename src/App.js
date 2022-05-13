@@ -9,11 +9,10 @@ import { AndroidDownloads } from './components/AndroidDownloads';
 import { IosDownloads } from './components/IosDownloads';
 import axios from 'axios';
 import './style.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Barchart dimensions 
 const width = 900;
-const height = 350;
+const height = 400;
 const margin = {
   top: 10,
   right: 25,
@@ -67,7 +66,7 @@ export const App = () => {
   // csvUrl = uploadedFile.filePath;
   console.log(csvUrl);
   
-  useEffect(() => {
+  useEffect(() => { 
     const row = (d) => {
       d.Downloads = +d.Downloads  //turns Downloads from string into integer 
       return d;
@@ -113,8 +112,8 @@ export const App = () => {
     <>
     <AndroidDownloads data={data} numFormat={numFormat}/>
     <IosDownloads data={data} numFormat={numFormat}/>
-    <div className="inner-container">   
-    <div className="input-style">
+    <div className="items-center mt-1">   
+    <div>
       <FileUpload 
           onSubmit={onSubmit}
           onChange={onFileChange}
@@ -125,7 +124,16 @@ export const App = () => {
     </div>    
     {/* Chart */}
      
-    <svg>
+    <svg className="mt-10  
+                    ml-[20%]
+                    xl:ml-[10%]
+                    lg:ml-[2%]
+                    md:ml-0
+                    sm:-ml-[5%]
+                    
+                    w-[900px] 
+                    h-[400px] 
+                    ">
       <g transform={`translate(${margin.left},${margin.top})`}>        
 				<AxisX 
           xScale = {xScale} 
@@ -134,7 +142,7 @@ export const App = () => {
           />
         <AxisY yScale = {yScale}/>
          
-        <text className="axis-label"
+        <text className="fill-[#635F5D] text-[2.53em]"
           x={innerWidth/2} 
           textAnchor="middle"
           y={innerHeight + xAxisLabelOffset}>Downloads</text>

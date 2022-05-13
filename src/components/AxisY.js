@@ -1,7 +1,8 @@
 export const AxisY = ({yScale}) => 
 				yScale.domain().map((tickValue) => (
-          <g className="tick">
+          <g>
           <text
+            className=" fill-[#635F5D]"
             key={tickValue+Math.random()}
             style={{ textAnchor: 'end' }}
             x={-4}
